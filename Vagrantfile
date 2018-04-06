@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "db01" do |db01|
     db01.vm.box = "ubuntu/trusty64"
     db01.vm.hostname = "db01"
-    db01.vm.network :private_network, ip:"172.28.12821", netmask:"24"
+    db01.vm.network :private_network, ip:"172.28.128.21", netmask:"24"
     # Enable ssh forward agent
     db01.vm.network :forwarded_port, guest: 22, host: 2222, host_ip: "0.0.0.0", id: "ssh", auto_correct: true
   end
